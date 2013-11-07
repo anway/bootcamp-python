@@ -16,22 +16,26 @@ def load(dictionary_name):
     Each line in the file contains exactly one word.
     """
     # TODO: remove the pass line and write your own code
-    pass
+    lines = set([line.strip() for line in open(dictionary_name)])
+    return lines
 
 def check(dictionary, word):
     """
     Returns True if `word` is in the English `dictionary`.
     """
-    pass
+    if word in dictionary:
+	return True
+    else:
+	return False
 
 def size(dictionary):
     """
     Returns the number of words in the English `dictionary`.
     """
-    pass
+    return len(dictionary)
 
 def unload(dictionary):
     """
     Removes everything from the English `dictionary`.
     """
-    pass
+    dictionary=set([])
